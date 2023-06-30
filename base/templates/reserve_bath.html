@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Reserva de Banho para Pets</h2>
+  <form method="post" action="{% url 'reserve_bath' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Reservar Banho</button>
+  </form>
+{% endblock %}
